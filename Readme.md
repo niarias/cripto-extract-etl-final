@@ -38,6 +38,8 @@ Para detener y eliminar los contenedores, utiliza:
 docker-compose down
 ```
 
+```bash
 dags/: Contiene los archivos DAG de Airflow que definen las tareas y flujos de trabajo del ETL.
 scripts/: Contiene la logica de negocio.
 docker-compose.yml: Define los servicios, redes y volúmenes para Docker.
+```
