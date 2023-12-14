@@ -1,0 +1,6 @@
+logs/*
+config/*
+# Ignote all __pycache__ directories
+__pycache__/
+# Ignore all .pyc files
+*.pyc

@@ -1,0 +1,31 @@
+CREATE TABLE IF NOT EXISTS dim_coins (
+    coin_id INT IDENTITY(1,1) PRIMARY KEY,
+    ticker VARCHAR(10) NOT NULL,
+    name VARCHAR(50) NOT NULL
+)
+DISTSTYLE ALL 
+SORTKEY(ticker);
+
+CREATE TABLE IF NOT EXISTS dim_coins_stg (
+    coin_id INT IDENTITY(1,1) PRIMARY KEY,
+    ticker VARCHAR(10) NOT NULL,
+    name VARCHAR(50) NOT NULL
+)
+DISTSTYLE ALL 
+SORTKEY(ticker);
+
+CREATE TABLE IF NOT EXISTS dim_exchanges (
+    exchange_id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    url VARCHAR(100) NOT NULL
+) 
+DISTSTYLE ALL
+SORTKEY(name);
+
+CREATE TABLE IF NOT EXISTS dim_exchanges_stg (
+    exchange_id INT IDENTITY(1,1) PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    url VARCHAR(100) NOT NULL
+) 
+DISTSTYLE ALL
+SORTKEY(name);
